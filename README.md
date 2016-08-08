@@ -1,8 +1,8 @@
 # czech-programmer-keyboard-layout-xkb
-Linux xkb keyboard layout for programmers who need to write in Czech occasionally. It is basically a US querty layout where czech characters are accessible by their usual keys upon pressing AltGr.
+Linux xkb keyboard layout for programmers who need to write Czech. It is based on US layout with czech characters accessible with AltGr.
 
 To install:
-- replace the file /usr/share/X11/xkb/symbols/cz with provided cz file (contains the programmer layout)
-- to force recompiling of layouts in ubuntu 14.4: sudo rm /var/lib/xkb/*.xkm
-- to switch layout without X11 restart: setxkbmap -layout cz -variant programmer
-- to reconfigure package: sudo dpkg-reconfigure xkb-data
+- replace the files /usr/share/X11/xkb/symbols/cz, /usr/sthare/X11/xkb/rules/base.lst, /usr/sthare/X11/xkb/rules/base.xml
+- in /usr/sthare/X11/xkb/rules/ link evdev.lst to base.lst and evdev.xml to base.xml
+- layout will be available in Settings / Text Entry
+- to test you can switch layout without X11 restart: setxkbmap -layout cz -variant programmer
