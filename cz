@@ -102,7 +102,7 @@ xkb_symbols "cz_programmer" {
     key <AC10>{[ semicolon,      colon,          uring,      Uring ]};
     key <AC11>{[ apostrophe,  quotedbl,        section,   quotedbl ]};
 
-    key <BKSL>{[ backslash,  brokenbar, dead_diaeresis, apostrophe ]};
+    key <BKSL>{[ backslash,        bar, dead_diaeresis, apostrophe ]};
 
     include "level3(ralt_switch)"
 };
