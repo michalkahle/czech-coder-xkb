@@ -98,7 +98,7 @@ xkb_symbols "cz_programmer" {
     key <AE10>{[         0,  parenright,        eacute,     Eacute ]};
     key <AE12>{[     equal,        plus,    dead_acute, dead_caron ]};
 
-    key <AD03>{[         e,           E,      EuroSign,   NoSymbol ]};
+    key <AD03>{[         e,           E,             e,   EuroSign ]};
     key <AD11>{[ bracketleft, braceleft,        uacute,     Uacute ]};
 
     key <AC10>{[ semicolon,      colon,          uring,      Uring ]};
