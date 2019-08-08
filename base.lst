@@ -404,7 +404,7 @@
   unicodeus       hr: Croatian (US keyboard with Croatian digraphs)
   us              hr: Croatian (US keyboard with Croatian letters)
   bksl            cz: Czech (with &lt;\|&gt; key)
-  coder           cz: Czech (US layout with Czech diacritics under AltGR)
+  coder           cz: Czech (coder)
   qwerty          cz: Czech (qwerty)
   qwerty_bksl     cz: Czech (qwerty, extended Backslash)
   ucw             cz: Czech (UCW layout, accented letters only)
