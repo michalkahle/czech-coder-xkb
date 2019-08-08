@@ -2678,8 +2678,8 @@
         </variant>
         <variant>
           <configItem>
-            <name>cz_programmer</name>
-            <description>Czech programmer's</description>
+            <name>coder</name>
+            <description>US layout with Czech diacritics under AltGR</description>
           </configItem>
         </variant>
         <variant>

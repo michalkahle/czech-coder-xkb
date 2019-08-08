@@ -79,12 +79,12 @@ xkb_symbols "bksl" {
 };
 
 partial alphanumeric_keys alternate_group
-xkb_symbols "cz_programmer" {
+xkb_symbols "coder" {
 
-    // us layout with czech chars under AltGr
+    // US layout with Czech chars under AltGr
 
     include "us"
-    name[Group1]= "Czech programmer's";
+    name[Group1]= "Czech (coder)";
 
     key <TLDE>{[     grave,  asciitilde,     semicolon, dead_abovering ]};
     key <AE02>{[         2,          at,        ecaron,     Ecaron ]};
