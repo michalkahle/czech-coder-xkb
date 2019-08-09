@@ -6,7 +6,6 @@ How it works: The basic layout is US so that all symbols are available and all k
 Linux xkb keyboard layout for coders who need to write Czech. It is based on US layout with Czech characters accessible with AltGr. Euro sign is available under AltGr + Shift + e.
 
 To install:
-- clone the repository: `git clone https://github.com/michalkahle/czech-coder-xkb-keyboard-layout.git`
-- cd into directory: `cd czech-coder-xkb-keyboard-layout/`
-- run `./install.sh`
+- cd to the xkb directory: `cd /usr/share/X11/xkb/`
+- patch some files (backups are created): `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb-keyboard-layout/master/cz-coder-xkb.patch | patch -bp1`
 - to test you can switch layout without X11 restart: `setxkbmap -layout cz -variant coder`
