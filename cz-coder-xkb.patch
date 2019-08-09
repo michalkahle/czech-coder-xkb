@@ -1,0 +1,91 @@
+diff -uraN xkbA/rules/base.lst xkbB/rules/base.lst
+--- xkbA/rules/base.lst	2019-08-09 18:09:36.287706573 +0200
++++ xkbB/rules/base.lst	2019-08-09 14:15:55.473909257 +0200
+@@ -404,6 +404,7 @@
+   unicodeus       hr: Croatian (US keyboard with Croatian digraphs)
+   us              hr: Croatian (US keyboard with Croatian letters)
+   bksl            cz: Czech (with &lt;\|&gt; key)
++  coder           cz: Czech (coder)
+   qwerty          cz: Czech (qwerty)
+   qwerty_bksl     cz: Czech (qwerty, extended Backslash)
+   ucw             cz: Czech (UCW layout, accented letters only)
+diff -uraN xkbA/rules/base.xml xkbB/rules/base.xml
+--- xkbA/rules/base.xml	2019-08-09 18:09:36.287706573 +0200
++++ xkbB/rules/base.xml	2019-08-09 18:08:33.141079867 +0200
+@@ -2678,6 +2678,12 @@
+         </variant>
+         <variant>
+           <configItem>
++            <name>coder</name>
++            <description>Czech (coder)</description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
+             <name>qwerty</name>
+             <description>Czech (qwerty)</description>
+           </configItem>
+diff -uraN xkbA/rules/evdev.lst xkbB/rules/evdev.lst
+--- xkbA/rules/evdev.lst	2019-08-09 18:09:36.287706573 +0200
++++ xkbB/rules/evdev.lst	2019-08-09 14:15:55.473909257 +0200
+@@ -404,6 +404,7 @@
+   unicodeus       hr: Croatian (US keyboard with Croatian digraphs)
+   us              hr: Croatian (US keyboard with Croatian letters)
+   bksl            cz: Czech (with &lt;\|&gt; key)
++  coder           cz: Czech (coder)
+   qwerty          cz: Czech (qwerty)
+   qwerty_bksl     cz: Czech (qwerty, extended Backslash)
+   ucw             cz: Czech (UCW layout, accented letters only)
+diff -uraN xkbA/rules/evdev.xml xkbB/rules/evdev.xml
+--- xkbA/rules/evdev.xml	2019-08-09 18:09:36.287706573 +0200
++++ xkbB/rules/evdev.xml	2019-08-09 18:08:33.141079867 +0200
+@@ -2678,6 +2678,12 @@
+         </variant>
+         <variant>
+           <configItem>
++            <name>coder</name>
++            <description>Czech (coder)</description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
+             <name>qwerty</name>
+             <description>Czech (qwerty)</description>
+           </configItem>
+diff -uraN xkbA/symbols/cz xkbB/symbols/cz
+--- xkbA/symbols/cz	2019-08-09 18:09:36.287706573 +0200
++++ xkbB/symbols/cz	2019-08-09 16:47:06.266766048 +0200
+@@ -253,3 +253,33 @@
+ 	xkb_symbols "sun_type6" {
+ 	include "sun_vndr/cz(sun_type6)"
+ };
++
++partial alphanumeric_keys alternate_group
++xkb_symbols "coder" {
++
++    // US layout with Czech chars under AltGr
++
++    include "us"
++    name[Group1]= "Czech (coder)";
++
++    key <TLDE>{[     grave,  asciitilde,     semicolon, dead_abovering ]};
++    key <AE02>{[         2,          at,        ecaron,     Ecaron ]};
++    key <AE03>{[         3,  numbersign,        scaron,     Scaron ]};
++    key <AE04>{[         4,      dollar,        ccaron,     Ccaron ]};
++    key <AE05>{[         5,     percent,        rcaron,     Rcaron ]};
++    key <AE06>{[         6, asciicircum,        zcaron,     Zcaron ]};
++    key <AE07>{[         7,   ampersand,        yacute,     Yacute ]};
++    key <AE08>{[         8,    asterisk,        aacute,     Aacute ]};
++    key <AE09>{[         9,   parenleft,        iacute,     Iacute ]};
++    key <AE10>{[         0,  parenright,        eacute,     Eacute ]};
++    key <AE12>{[     equal,        plus,    dead_acute, dead_caron ]};
++
++    key <AD03>{[         e,           E,             e,   EuroSign ]};
++    key <AD11>{[ bracketleft, braceleft,        uacute,     Uacute ]};
++
++    key <AC10>{[ semicolon,      colon,          uring,      Uring ]};
++    key <AC11>{[ apostrophe,  quotedbl,        section,   quotedbl ]};
++    key <BKSL>{[ backslash,        bar, dead_diaeresis, apostrophe ]};
++
++    include "level3(ralt_switch)"
++};
