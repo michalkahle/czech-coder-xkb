@@ -78,36 +78,6 @@ xkb_symbols "bksl" {
     key <BKSL>  { [ backslash,        bar,        slash,     NoSymbol ] };
 };
 
-partial alphanumeric_keys alternate_group
-xkb_symbols "coder" {
-
-    // US layout with Czech chars under AltGr
-
-    include "us"
-    name[Group1]= "Czech (coder)";
-
-    key <TLDE>{[     grave,  asciitilde,     semicolon, dead_abovering ]};
-    key <AE02>{[         2,          at,        ecaron,     Ecaron ]};
-    key <AE03>{[         3,  numbersign,        scaron,     Scaron ]};
-    key <AE04>{[         4,      dollar,        ccaron,     Ccaron ]};
-    key <AE05>{[         5,     percent,        rcaron,     Rcaron ]};
-    key <AE06>{[         6, asciicircum,        zcaron,     Zcaron ]};
-    key <AE07>{[         7,   ampersand,        yacute,     Yacute ]};
-    key <AE08>{[         8,    asterisk,        aacute,     Aacute ]};
-    key <AE09>{[         9,   parenleft,        iacute,     Iacute ]};
-    key <AE10>{[         0,  parenright,        eacute,     Eacute ]};
-    key <AE12>{[     equal,        plus,    dead_acute, dead_caron ]};
-
-    key <AD03>{[         e,           E,             e,   EuroSign ]};
-    key <AD11>{[ bracketleft, braceleft,        uacute,     Uacute ]};
-
-    key <AC10>{[ semicolon,      colon,          uring,      Uring ]};
-    key <AC11>{[ apostrophe,  quotedbl,        section,   quotedbl ]};
-    key <BKSL>{[ backslash,        bar, dead_diaeresis, apostrophe ]};
-
-    include "level3(ralt_switch)"
-};
-
 partial alphanumeric_keys
 xkb_symbols "qwerty" {
 

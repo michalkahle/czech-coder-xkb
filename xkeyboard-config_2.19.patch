@@ -1,7 +1,9 @@
-diff -uraN xkbA/rules/base.lst xkbB/rules/base.lst
---- xkbA/rules/base.lst	2019-08-09 18:09:36.287706573 +0200
-+++ xkbB/rules/base.lst	2019-08-09 14:15:55.473909257 +0200
-@@ -404,6 +404,7 @@
+diff -raN '--unified=5' orig-2.19/rules/base.lst patched-2.19/rules/base.lst
+--- orig-2.19/rules/base.lst	2019-08-09 19:10:04.712231939 +0200
++++ patched-2.19/rules/base.lst	2019-08-09 14:15:55.473909257 +0200
+@@ -402,10 +402,11 @@
+   alternatequotes hr: Croatian (with guillemets for quotes)
+   unicode         hr: Croatian (with Croatian digraphs)
    unicodeus       hr: Croatian (US keyboard with Croatian digraphs)
    us              hr: Croatian (US keyboard with Croatian letters)
    bksl            cz: Czech (with &lt;\|&gt; key)
@@ -9,10 +11,14 @@ diff -uraN xkbA/rules/base.lst xkbB/rules/base.lst
    qwerty          cz: Czech (qwerty)
    qwerty_bksl     cz: Czech (qwerty, extended Backslash)
    ucw             cz: Czech (UCW layout, accented letters only)
-diff -uraN xkbA/rules/base.xml xkbB/rules/base.xml
---- xkbA/rules/base.xml	2019-08-09 18:09:36.287706573 +0200
-+++ xkbB/rules/base.xml	2019-08-09 18:08:33.141079867 +0200
-@@ -2678,6 +2678,12 @@
+   dvorak-ucw      cz: Czech (US Dvorak with CZ UCW support)
+   rus             cz: Russian (Czech, phonetic)
+diff -raN '--unified=5' orig-2.19/rules/base.xml patched-2.19/rules/base.xml
+--- orig-2.19/rules/base.xml	2019-08-09 19:10:04.712231939 +0200
++++ patched-2.19/rules/base.xml	2019-08-09 18:08:33.141079867 +0200
+@@ -2676,10 +2676,16 @@
+             <description>Czech (with &lt;\|&gt; key)</description>
+           </configItem>
          </variant>
          <variant>
            <configItem>
@@ -25,10 +31,14 @@ diff -uraN xkbA/rules/base.xml xkbB/rules/base.xml
              <name>qwerty</name>
              <description>Czech (qwerty)</description>
            </configItem>
-diff -uraN xkbA/rules/evdev.lst xkbB/rules/evdev.lst
---- xkbA/rules/evdev.lst	2019-08-09 18:09:36.287706573 +0200
-+++ xkbB/rules/evdev.lst	2019-08-09 14:15:55.473909257 +0200
-@@ -404,6 +404,7 @@
+         </variant>
+         <variant>
+diff -raN '--unified=5' orig-2.19/rules/evdev.lst patched-2.19/rules/evdev.lst
+--- orig-2.19/rules/evdev.lst	2019-08-09 19:10:04.712231939 +0200
++++ patched-2.19/rules/evdev.lst	2019-08-09 14:15:55.473909257 +0200
+@@ -402,10 +402,11 @@
+   alternatequotes hr: Croatian (with guillemets for quotes)
+   unicode         hr: Croatian (with Croatian digraphs)
    unicodeus       hr: Croatian (US keyboard with Croatian digraphs)
    us              hr: Croatian (US keyboard with Croatian letters)
    bksl            cz: Czech (with &lt;\|&gt; key)
@@ -36,10 +46,14 @@ diff -uraN xkbA/rules/evdev.lst xkbB/rules/evdev.lst
    qwerty          cz: Czech (qwerty)
    qwerty_bksl     cz: Czech (qwerty, extended Backslash)
    ucw             cz: Czech (UCW layout, accented letters only)
-diff -uraN xkbA/rules/evdev.xml xkbB/rules/evdev.xml
---- xkbA/rules/evdev.xml	2019-08-09 18:09:36.287706573 +0200
-+++ xkbB/rules/evdev.xml	2019-08-09 18:08:33.141079867 +0200
-@@ -2678,6 +2678,12 @@
+   dvorak-ucw      cz: Czech (US Dvorak with CZ UCW support)
+   rus             cz: Russian (Czech, phonetic)
+diff -raN '--unified=5' orig-2.19/rules/evdev.xml patched-2.19/rules/evdev.xml
+--- orig-2.19/rules/evdev.xml	2019-08-09 19:10:04.712231939 +0200
++++ patched-2.19/rules/evdev.xml	2019-08-09 18:08:33.141079867 +0200
+@@ -2676,10 +2676,16 @@
+             <description>Czech (with &lt;\|&gt; key)</description>
+           </configItem>
          </variant>
          <variant>
            <configItem>
@@ -52,10 +66,14 @@ diff -uraN xkbA/rules/evdev.xml xkbB/rules/evdev.xml
              <name>qwerty</name>
              <description>Czech (qwerty)</description>
            </configItem>
-diff -uraN xkbA/symbols/cz xkbB/symbols/cz
---- xkbA/symbols/cz	2019-08-09 18:09:36.287706573 +0200
-+++ xkbB/symbols/cz	2019-08-09 16:47:06.266766048 +0200
-@@ -253,3 +253,33 @@
+         </variant>
+         <variant>
+diff -raN '--unified=5' orig-2.19/symbols/cz patched-2.19/symbols/cz
+--- orig-2.19/symbols/cz	2019-08-09 19:10:04.712231939 +0200
++++ patched-2.19/symbols/cz	2019-08-09 16:47:06.266766048 +0200
+@@ -251,5 +251,35 @@
+ 
+ partial alphanumeric_keys
  	xkb_symbols "sun_type6" {
  	include "sun_vndr/cz(sun_type6)"
  };

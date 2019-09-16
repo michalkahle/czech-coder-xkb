@@ -1,0 +1,1 @@
+diff -raN --unified=5 orig-2.23/ patched-2.23/ > xkeyboard-config_2.23.patch
