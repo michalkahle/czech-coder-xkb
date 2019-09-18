@@ -24,7 +24,9 @@ Three ways to uninstall:
 
 If you run into troubles please open an issue so that we can fix it.
 
-czech-coder-xkb was proposed for [merging upstream into the freedesktop.org xkeyboard-config repository](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/merge_requests/25)
+czech-coder-xkb was proposed for [merging upstream into the freedesktop.org xkeyboard-config repository](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/merge_requests/25).
+
+Very similar layout is [available for macOS](http://blog.destil.cz/2012/10/ceska-programatorska-klavesnice-pro-mac.html).
 
 # Používejte na Linuxu americké i české rozložení kláves bez přepínání
 Neustálé přepínání rozložení klávesnice sníží vaši produktivitu. Mně strašně lezlo na nervy. S tímto rozložením můžete přestat myslet na přepínání klávesnice a nechat to vašemu podvědomí.
