@@ -17,7 +17,10 @@ To install on Debian/Ubuntu:
 
 To install on other distros: Please help me to test and improve the instructions.
 
-To uninstall: either reinstall `xkb-data`: `sudo apt install --reinstall xkb-data` or run the same line as was used for installing but add `-R` (reverse) switch to `patch` command or manually replace patched files with the original ones.
+Three ways to uninstall: 
+- reinstall xkb-data package: `sudo apt install --reinstall xkb-data`
+- or run the same line as was used for installing but add `-R` (reverse) switch to `patch` command
+- or manually replace patched files with the original ones.
 
 If you run into troubles please open an issue so that we can fix it.
 
