@@ -7,7 +7,7 @@ How it works: The basic layout is US so that all symbols are available and all k
 
 Upper case of accented letters are available with AltGr + Shift combination. Euro sign is available under AltGr + Shift + e.
 
-To install on Debian/Ubuntu:
+**To install** on Debian/Ubuntu:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
 - cd to the xkb directory: `cd /usr/share/X11/xkb/`
 - patch some files (backups are created):
