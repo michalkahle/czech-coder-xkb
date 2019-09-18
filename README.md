@@ -15,8 +15,9 @@ To install on Debian/Ubuntu:
 - for version 2.23: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.23.patch | sudo patch -bp1`
 - to test you can switch layout without X11 restart: `setxkbmap -layout cz -variant coder`
 
-To install on other distros:
-- Please help me to test and improve the instructions.
+To install on other distros: Please help me to test and improve the instructions.
+
+To uninstall: either reinstall `xkb-data`: `sudo apt install --reinstall xkb-data` or run the same line as was used for installing but add `-R` (reverse) switch to `patch` command or manually replace patched files with the original ones.
 
 If you run into troubles please open an issue so that we can fix it.
 
