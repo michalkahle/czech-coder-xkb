@@ -1,20 +1,22 @@
 # Use both US and Czech keyboard layout in Linux without switching
 Constant keyboard layout switching hampers your productivity. It certainly hampered mine. With this keyboard layout you can forget about keyboard switching and let your muscle memory handle it.
 
-Czech coder layout is inspired by the Czech Programmers keyboard layout in Windows with **one significant difference:** Czech Programmers layout lets you type accented characters by pressing AltGr but regular characters are not available in this mode. You have to release AltGr to type them. This means pressing and releasing AltGr several times during typing a single word! That is unacceptable for touch typing. Czech coder layout solves this and lets you type whole sentences and paragraphs in Czech with pressed AltGr.
+Czech coder layout is inspired by the Czech Programmers keyboard layout in Windows with **one significant difference:** Czech coder lets you type fluently in Czech with pressed AltGr without the need to release it! When you do release the AltGr, you are back to US layout which is optimal for coding (imho).
 
 ### How it works 
-The basic layout is US so that all symbols are available and all keyboard shortcuts work as intended. When you hold AltGr with your right thumb the layout changes to Czech (qwerty variant; there is as little rearrangement as possible). With use, you will learn to press the right Alt unconsciously.
+The basic layout is US so that all symbols are available and all keyboard shortcuts work as intended. When you hold AltGr with your right thumb the layout changes to Czech (qwerty variant; there is as little rearrangement as possible). With use, you will learn to press the right Alt unconsciously as I did.
 
 Upper case of accented letters are available with AltGr + Shift combination. Euro sign is available under AltGr + Shift + e.
 
 ### Disadvantages
 - Location of right thumb on AltGr is in an awkward position under your palm on most keyboards and it makes longer typing in Czech inconvenient. I certainly wouldn't want to write a novel this way. But it is ok for short snippets of text. 
-- Only left thumb is left to type spaces in Czech.
+- Only left thumb is left to type spaces in Czech (not an issue for me).
 - There is a small inconsistency because of the euro sign where you have to release AltGr to type upper case "E" when writing Czech.
 
 ### Installation
-Tested on Debian/Ubuntu/Mint. Please help me to test and improve the instructions to install on other distros.
+On Ubuntu 20.4 the 'coder' variant is already present. Just switch to it by `setxkbmap -layout cz -variant coder`.
+
+In older versions of Debian/Ubuntu/Mint:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
 - cd to the xkb directory: `cd /usr/share/X11/xkb/`
 - patch some files (backups are created):
