@@ -1,20 +1,22 @@
 # Use both US and Czech keyboard layout in Linux without switching
 Constant keyboard layout switching hampers your productivity. It certainly hampered mine. With this keyboard layout you can forget about keyboard switching and let your muscle memory handle it.
 
-Czech coder layout is inspired by the Czech Programmers keyboard layout in Windows with **one significant difference:** Czech coder lets you type fluently in Czech with pressed AltGr without the need to release it! When you do release the AltGr, you are back to US layout which is optimal for coding (imho).
+Czech coder layout is inspired by the Czech Programmers keyboard layout in Windows with **one significant difference:** Czech coder lets you type fluently in Czech with pressed AltGr without the need to release it! When you do release the AltGr, you are back to US layout which is optimal for coding.
 
 ### How it works 
-The basic layout is US so that all symbols are available and all keyboard shortcuts work as intended. When you hold AltGr with your right thumb the layout changes to Czech (qwerty variant; there is as little rearrangement as possible). With use, you will learn to press the right Alt unconsciously as I did.
+The basic layout is US so that all symbols are available and all keyboard shortcuts work as intended. When you hold AltGr with your right thumb the layout changes to Czech (qwerty variant; there is as little rearrangement as possible). With use, you will learn to press the right Alt unconsciously.
 
 Upper case of accented letters are available with AltGr + Shift combination. Euro sign is available under AltGr + Shift + e.
 
-### Disadvantages
+### Disadvantages and compromises
 - Location of right thumb on AltGr is in an awkward position under your palm on most keyboards and it makes longer typing in Czech inconvenient. I certainly wouldn't want to write a novel this way. But it is ok for short snippets of text. 
-- Only left thumb is left to type spaces in Czech (not an issue for me).
+- Only left thumb is left to type spaces in Czech.
 - There is a small inconsistency because of the euro sign where you have to release AltGr to type upper case "E" when writing Czech.
 
 ### Installation
-On Ubuntu 20.4 the 'coder' variant is already present. Just switch to it by `setxkbmap -layout cz -variant coder`.
+On Ubuntu 20.4 and later or its derivatives the 'coder' variant is already present. 
+- You can switch to it temporarily by `setxkbmap -layout cz -variant coder`.
+- 'coder' variant is registered in [the 'extras' section as an 'exotic' layout](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/Rules/#layoutsvariants). Therefore, you won't see it by default in Gnome Settings Input Sources. You will have to set `gsettings set org.gnome.desktop.input-sources show-all-sources true` to see it. Set it as the only input source and restart the session.
 
 In older versions of Debian/Ubuntu/Mint:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
@@ -23,15 +25,12 @@ In older versions of Debian/Ubuntu/Mint:
 - for version 2.19: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.19.patch | sudo patch -bp1`
 - for version 2.23: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.23.patch | sudo patch -bp1`
 - to test you can switch layout without X11 restart: `setxkbmap -layout cz -variant coder`
+- to uninstall: `sudo apt install --reinstall xkb-data`.
 
-### Three ways to uninstall
-- reinstall xkb-data package: `sudo apt install --reinstall xkb-data`
-- or run the same line as was used for installing but add `-R` (reverse) switch to `patch` command
-- or manually replace patched files with the original ones.
+Other distros:
+Look into the patches what needs to be done. When you make it work, please submit PR with instructions.
 
 If you run into troubles please open an issue so that we can fix it.
-
-czech-coder-xkb was [merged upstream into the freedesktop.org xkeyboard-config repository](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/commit/e4f7f8d89dc4731b7be08ba2c9527626a77dc3d5).
 
 Very similar layout is [available for macOS](http://blog.destil.cz/2012/10/ceska-programatorska-klavesnice-pro-mac.html).
 
