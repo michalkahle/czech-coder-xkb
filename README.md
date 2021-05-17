@@ -16,7 +16,7 @@ Upper case of accented letters are available with AltGr + Shift combination. Eur
 ### Installation
 On Ubuntu 20.4 and later or its derivatives the 'coder' variant is already present. 
 - You can switch to it temporarily by `setxkbmap -layout cz -variant coder`.
-- 'coder' variant is registered in [the 'extras' section as an 'exotic' layout](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/Rules/#layoutsvariants). Therefore, you won't see it by default in Gnome Settings Input Sources. You will have to set `gsettings set org.gnome.desktop.input-sources show-all-sources true` to see it. Set it as the only input source and restart the session.
+- 'coder' variant is registered in [the 'extras' section as an 'exotic' layout](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/Rules/#layoutsvariants). Therefore, you won't see it by default in Gnome Settings Input Sources. You will have to set `gsettings set org.gnome.desktop.input-sources show-all-sources true` and reopen your settings app to see it. Set it as the only input source and restart your Gnome session.
 
 In older versions of Debian/Ubuntu/Mint:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
