@@ -14,6 +14,8 @@ Upper case of accented letters are available with AltGr + Shift combination. Eur
 - There is a small inconsistency because of the euro sign where you have to release AltGr to type upper case "E" when writing Czech.
 
 ### Installation
+Unfortunately, the following instructions **do not work with Wayland**. Please help me to make it work there. I'll update these instructions when I learn the proper way how to switch keyboard layouts on Wayland.
+
 On Ubuntu 20.4 and later or its derivatives the 'coder' variant is already present. 
 - You can switch to it temporarily by `setxkbmap -layout cz -variant coder`.
 - 'coder' variant is registered in [the 'extras' section as an 'exotic' layout](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/Rules/#layoutsvariants). Therefore, you won't see it by default in Gnome Settings Input Sources. You will have to set `gsettings set org.gnome.desktop.input-sources show-all-sources true` and reopen your settings app to see it. Set it as the only input source and restart your Gnome session.
