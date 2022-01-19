@@ -25,8 +25,9 @@ In older versions of Debian/Ubuntu/Mint:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
 - cd to the xkb directory: `cd /usr/share/X11/xkb/`
 - patch some files (backups are created):
-- for version 2.19: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.19.patch | sudo patch -bp1`
-- for version 2.23: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.23.patch | sudo patch -bp1`
+- for version 2.19 - 2.22: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.19.patch | sudo patch -bp1`
+- for version 2.23 - 2.27: `sudo curl https://raw.githubusercontent.com/michalkahle/czech-coder-xkb/master/xkeyboard-config_2.23.patch | sudo patch -bp1`
+- for version 2.28 and later: the 'coder' variant is already present, see above.
 - to test you can switch layout without X11 restart: `setxkbmap -layout cz -variant coder`
 - to uninstall: `sudo apt install --reinstall xkb-data`.
 
