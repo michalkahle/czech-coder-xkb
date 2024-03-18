@@ -14,7 +14,7 @@ Upper case of accented letters are available with AltGr + Shift combination. Eur
 - There is a small inconsistency because of the euro sign where you have to release AltGr to type upper case "E" when writing Czech.
 
 ### Installation
-Unfortunately, the following instructions **do not work with Wayland**. Please help me to make it work there. I'll update these instructions when I learn the proper way how to switch keyboard layouts on Wayland.
+Unfortunately, the following instructions **do not work with Wayland**. There are only instructions for SwayWM for now. Please help me to make it work there. I'll update these instructions when I learn the proper way how to switch keyboard layouts on Wayland.
 
 On Ubuntu 20.4 and later or its derivatives the 'coder' variant is already present. 
 - You can switch to it temporarily by `setxkbmap -layout cz -variant coder`.
@@ -37,6 +37,20 @@ Look into the patches what needs to be done. When you make it work, please submi
 If you run into troubles please open an issue so that we can fix it.
 
 Very similar layout is [available for macOS](http://blog.destil.cz/2012/10/ceska-programatorska-klavesnice-pro-mac.html).
+
+#### Wayland
+
+In wayland, input and output configuration is the job of the compositor. Thus, setting a keyboard layout varies. 
+
+For SwayWM, add this to your config:
+```
+input * {
+    xkb_layout "cz"
+    xkb_variant "coder"
+}
+```
+
+If you know how to set up keyboard layout for other WMs/DEs, please submit a PR.
 
 # Používejte na Linuxu americké i české rozložení kláves bez přepínání
 Neustálé přepínání rozložení klávesnice sníží vaši produktivitu. Mně strašně lezlo na nervy. S tímto rozložením můžete přestat myslet na přepínání klávesnice a nechat to vašemu podvědomí.
