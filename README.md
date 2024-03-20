@@ -31,7 +31,7 @@ Upper case of accented letters are available with AltGr + Shift combination. Eur
 | `'`         | `"`    | `§`          | `"`           |
 | ` \ `       | ` \| ` | `<modifier>` | `'`           |
 
-Combination `` AltGr + Shift + ` ``, `AltGt + =`, `AltGt + Shift =` and `AltGr + \ ` are modifiers which you need to press, release and press next button/combination:
+Combinations `` AltGr + Shift + ` ``, `AltGt + =`, `AltGt + Shift =` and `AltGr + \ ` are modifiers which you need to press, release and press next button/combination:
 
 | Raw button | `AltrGt + =`, | `AltrGt + =`, `Shift +` | `AltrGt + Shift + =`, | `AltrGt + Shift + =`, `Shift +` |
 |------------|---------------|-------------------------|-----------------------|---------------------------------|
@@ -55,6 +55,7 @@ Combination `` AltGr + Shift + ` ``, `AltGt + =`, `AltGt + Shift =` and `AltGr +
 | `y`         | `Y`    | `ý`          | `Ý`           |
 | `u`         | `U`    | `ú`          | `Ú`           |
 | `i`         | `I`    | `í`          | `Í`           |
+| `o`         | `O`    | `ó`          | `Ó`           |
 | `a`         | `A`    | `á`          | `Á`           |
 | `s`         | `S`    | `š`          | `Š`           |
 | `d`         | `D`    | `ď`          | `Ď`           |
