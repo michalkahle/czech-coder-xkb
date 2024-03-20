@@ -54,10 +54,10 @@ Or if you want to use multiple layouts in the same time _(and switch them by Cap
 ```
 input "type:keyboard" {
     xkb_layout "cz(coder),us"
-    xkb_variant ",winkeys"
     xkb_options "grp:caps_toggle,grp_led:caps"
 }
 ```
+
 
 If you know how to set up keyboard layout for other WMs/DEs, please submit a PR.
 
