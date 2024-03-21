@@ -78,7 +78,8 @@ Unfortunately, the following instructions **do not work with Wayland**. There ar
 On Ubuntu 20.4 and later or its derivatives the 'coder' variant is already present. 
 - You can switch to it temporarily by `setxkbmap -layout cz -variant coder`.
 - 'coder' variant is registered in [the 'extras' section as an 'exotic' layout](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/Rules/#layoutsvariants). Therefore, you won't see it by default in Gnome Settings Input Sources. You will have to set `gsettings set org.gnome.desktop.input-sources show-all-sources true` and reopen your settings app to see it. Set it as the only input source and restart your Gnome session.
-- Alternatively, you can set czech-coder as your only Gnome input source on the command line: `gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'cz+coder')]"`
+- Alternatively, you can set czech-coder as your only Gnome imput source on the command line: `gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'cz+coder')]"`
+- For MATE desktop: `gsettings set org.mate.peripherals-keyboard-xkb.kbd layouts "['cz\tcoder']"`
 
 In older versions of Debian/Ubuntu/Mint:
 - Find out which version of `xkb-data` package is installed: `apt list xkb-data`
@@ -111,6 +112,15 @@ input * {
     xkb_variant "coder"
 }
 ```
+
+Or if you want to use multiple layouts in the same time _(and switch them by CapsLock)_:
+```
+input "type:keyboard" {
+    xkb_layout "cz(coder),us"
+    xkb_options "grp:caps_toggle,grp_led:caps"
+}
+```
+
 
 If you know how to set up keyboard layout for other WMs/DEs, please submit a PR.
 
