@@ -1,0 +1,70 @@
+// Keyboard layouts for Czechia.
+
+default partial alphanumeric_keys
+xkb_symbols "coder" {
+
+    // A US layout with Czech characters under AltGr,
+    // for touch-typing programmers who need to write Czech occasionally.
+    // https://github.com/michalkahle/czech-coder-xkb
+
+    include "us"
+    name[Group1]= "Czech (coder)";
+
+    key <TLDE>	{[     grave,  asciitilde,     semicolon, dead_abovering ]};
+    key <AE02>	{[         2,          at,        ecaron,     Ecaron ]};
+    key <AE03>	{[         3,  numbersign,        scaron,     Scaron ]};
+    key <AE04>	{[         4,      dollar,        ccaron,     Ccaron ]};
+    key <AE05>	{[         5,     percent,        rcaron,     Rcaron ]};
+    key <AE06>	{[         6, asciicircum,        zcaron,     Zcaron ]};
+    key <AE07>	{[         7,   ampersand,        yacute,     Yacute ]};
+    key <AE08>	{[         8,    asterisk,        aacute,     Aacute ]};
+    key <AE09>	{[         9,   parenleft,        iacute,     Iacute ]};
+    key <AE10>	{[         0,  parenright,        eacute,     Eacute ]};
+    key <AE12>	{[     equal,        plus,    dead_acute, dead_caron ]};
+
+    key <AD03>	{[         e,           E,             e,   EuroSign ]};
+    key <AD11>	{[ bracketleft, braceleft,        uacute,     Uacute ]};
+
+    key <AC10>	{[ semicolon,      colon,          uring,      Uring ]};
+    key <AC11>	{[ apostrophe,  quotedbl,        section,   quotedbl ]};
+    key <BKSL>	{[ backslash,        bar, dead_diaeresis, apostrophe ]};
+
+    include "level3(ralt_switch)"
+};
+
+xkb_symbols "coder_foreigner" {
+
+    // A US layout with Czech characters under AltGr,
+    // for touch-typing programmers who need to write Czech occasionally.
+    // Variant for foreigners for whom traditional Czech layout has no sense.
+    // https://github.com/michalkahle/czech-coder-xkb
+
+    include "us"
+    name[Group1]= "Czech (coder foreigner)";
+
+    key <TLDE>	{[     grave,  asciitilde,     semicolon, dead_abovering ]}; // AltGr + ` = ё <modifier>
+    key <AE03>	{[         3,  numbersign,        ecaron,     Ecaron ]}; // AltGr + 3 = ě Ě
+    key <AE04>	{[         4,      dollar,      EuroSign,   NoSymbol ]}; // AltGr + 4 = €
+    key <AE07>	{[         7,   ampersand,         uring,      Uring ]}; // AltGr + 7 = ů Ů
+    key <AE12>	{[     equal,        plus,    dead_acute, dead_caron ]}; // AltGr + = = <modified> <modifier>
+
+    key <AD03>	{[         e,           E,        eacute,     Eacute ]}; // AltGr + 2 = é É
+    key <AD04>	{[         r,           R,        rcaron,     Rcaron ]}; // AltGr + r = ř Ř
+    key <AD05>	{[         t,           T,        tcaron,     Tcaron ]}; // AltGr + t = ť Ť
+    key <AD06>	{[         y,           Y,        yacute,     Yacute ]}; // AltGr + y = ý Ý
+    key <AD07>	{[         u,           U,        uacute,     Uacute ]}; // AltGr + u = ú Ú
+    key <AD08>	{[         i,           I,        iacute,     Iacute ]}; // AltGr + i = í Í
+    key <AD09>	{[         o,           O,        oacute,     Oacute ]}; // AltGr + o = ó Ó
+
+    key <AC01>	{[         a,           A,        aacute,     Aacute ]}; // AltGr + a = á Á
+    key <AC02>	{[         s,           S,        scaron,     Scaron ]}; // AltGr + s = š Š
+    key <AC03>	{[         d,           D,        dcaron,     Dcaron ]}; // AltGr + d = ď Ď
+    key <AC11>	{[ apostrophe,  quotedbl,        section,   quotedbl ]}; // AltGr + ' = § "
+    key <BKSL>	{[ backslash,        bar, dead_diaeresis, apostrophe ]}; // AltGr + \ = <modifier> '
+
+    key <AB01>	{[         z,           Z,        zcaron,     Zcaron ]}; // AltGr + z = ž Ž
+    key <AB03>	{[         c,           C,        ccaron,     Ccaron ]}; // AltGr + c = č Č
+    key <AB06>	{[         n,           N,        ncaron,     Ncaron ]}; // AltGr + n = ň Ň
+
+    include "level3(ralt_switch)"
+};

@@ -101,6 +101,19 @@ If you run into troubles please open an issue so that we can fix it.
 
 Very similar layout is [available for macOS](http://blog.destil.cz/2012/10/ceska-programatorska-klavesnice-pro-mac.html).
 
+### Alternative Installation
+
+If you are interesting only in `coder` layout you can skip this section. If you are curious about `coder_foreigner` and do not want to apply patches to your system as root,
+you can choose user specific configuration by putting files from `.config/xkb` to any of [allowed user locations](https://xkbcommon.org/doc/current/group__include-path.html):
+
+* The path `$XDG_CONFIG_HOME/xkb`, with the usual `XDG_CONFIG_HOME` fallback to `$HOME/.config/` if unset.
+* The path `$HOME/.xkb`, where `$HOME` is the value of the environment variable `HOME`.
+* The `XKB_CONFIG_EXTRA_PATH` environment variable, if defined, otherwise the system configuration directory, defined at library configuration time (usually `/etc/xkb`).
+* The `XKB_CONFIG_ROOT` environment variable, if defined, otherwise the system XKB root, defined at library configuration time.
+
+So basically you can copy `.config/` directory from repository to your home and it should be able to choose `cd(coder_foreigner)` layout. 
+But because it still an `extra` layout you may need to use magic from above.
+
 #### Wayland
 
 In wayland, input and output configuration is the job of the compositor. Thus, setting a keyboard layout varies. 
@@ -135,4 +148,5 @@ Základní rozložení je US, takže jsou dostupné všechny symboly a klávesov
 Velká písmena s diakritikou jsou dostupná s AltGr + Shift. Znak euro je dostupný pod AltGr + Shift + e.
 
 Návod na instalaci výše.
+
 
